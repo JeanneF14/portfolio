@@ -1,0 +1,293 @@
+body {
+	background-color:#f1c8c8;
+    margin: 0;
+}
+header {
+    background-color: #000000;
+    padding: 0px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	position: fixed;
+	top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.logo img {
+    max-width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    font-family: 'Times New Roman', cursive;
+}
+
+nav a:hover {
+    color: #f1c8c8; /* Couleur au survol */
+}
+
+#bienvenue{
+	margin: 0% 50% 0 0%;	
+}
+
+#mot_bienvenu{
+	align-items: center;
+	padding-top: 10%;
+	font-size: 50px;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	color: #000000;
+	flex: 1 1 0px;
+}
+#texte_presentation{
+	margin: 3% 3% 0 3%;	
+}
+
+#texte{
+	align-items: center;
+	padding-top: 10%;
+}
+
+img {
+	max-height: 75%;
+	max-width: 75%;
+}
+
+
+#image_accueil{
+	max-height: 75%;
+	max-width: 75%;
+}
+h1{
+    border: 1px solid black;
+    border-radius:40px;
+    background-color: #000000;
+    color:white;
+    font-size:35px;
+    font-family: 'Times New Roman', cursive;
+    width:30%;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article div section{
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+	color: #323232;
+	flex: 1 1 0px;
+}
+
+article div{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#presentation, h2, h3{
+	text-align: center;
+}
+
+h2{
+	color : #000000;
+	font-size: 32px;
+    font-family: 'Times New Roman', cursive;
+}
+
+.case{
+	border: 1px solid #463f3a;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 30px;
+}
+
+.lien a{
+    display: flex;
+    text-align: center;
+	font-family: 'Times New Roman', cursive;
+}
+
+#timeline{
+    border-left: 2px solid #463f3a;
+	margin-left: 2%;
+	padding-left: 2%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	max-width: 40%;
+	
+}
+.titre_parcours{
+	margin: 1% 0 1% 0;
+	text-align: left;
+}
+
+.titre_parcours::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background: #000000;
+	border-radius: 999px;
+	left: -72px;
+	border: 4px solid #000000;  
+}
+
+.card{
+	margin:0;
+	position: relative;
+	margin: 0 0 3% 3%;
+	padding: 10px;
+	border: 1px solid #463f3a;
+	border-radius: 30px;
+	max-width: 100%;
+}
+
+#contacts {
+    width: 80%;
+    margin: 0 auto;
+}
+section a {
+    text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+    display: block;
+	padding: 0.5% 0 0.5% 0;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    width: 30%;
+    float: left;
+    padding: 20px;
+}
+
+form {
+    background-color: #f1c8c8;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+#boite_contact{
+	margin-right: 1%;
+	display: flex;
+	flex-direction: column;
+}
+
+dl{
+	display: grid;
+	grid-template-columns: max-content auto;
+}
+
+dt{
+	grid-column-start: 1;
+}
+
+dd{
+	grid-column-start: 2;
+}
+
+#boite_contact img {
+    max-width: 100px; /* Définir une largeur maximale pour toutes les images dans la section 'Mes contacts' */
+    height: auto; /* Pour conserver le ratio hauteur/largeur */
+}
+
+/*Téléphones*/
+@media only screen and (max-width: 767px) {
+    header nav ul {
+        display: none;
+    }
+    header nav.active ul {
+        display: block;
+    }
+    header nav ul li {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+    article {
+        padding: 10px;
+    }
+    article section {
+        margin-bottom: 20px;
+    }
+}
+
+/*Tablettes */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    header nav ul {
+        display: none;
+    }
+    header nav.active ul {
+        display: block;
+    }
+    header nav ul li {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+    article {
+        padding: 20px;
+    }
+    article section {
+        margin-bottom: 30px;
+    }
+}
